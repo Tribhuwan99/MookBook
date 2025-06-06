@@ -1,0 +1,121 @@
+/* body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff8e1;
+  } */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fb8c00;
+    padding: 15px 30px;
+    align-items: center;
+    color: white;
+  } */
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffa726;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    /* font-size: 1.6rem;
+    font-weight: bold; */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links, .auth-links {
+    /* list-style: none;
+    display: flex;
+    gap: 20px; */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links a,
+  .auth-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .auth-links .signup-btn {
+    background-color: white;
+    color: #fb8c00;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold; 
+        
+  }
+  
+  .about {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .about h1 {
+    text-align: center;
+    color: #e65100;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .card h2 {
+    color: #fb8c00;
+    margin-bottom: 10px;
+  }
+  
+  .card p, .card ul {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .card ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #fb8c00;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  

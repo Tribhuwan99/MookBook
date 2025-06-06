@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Quiz Exam</title>
+  <link rel="stylesheet" href="/css/createQuizExam.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create Quiz Exam</h1>
+    <form id="quizForm" action="/quiz/createQuizExam" method="post">
+      <label for="name">Exam Name</label>
+      <input type="text" id="name" name="name" required placeholder="e.g., SSC CGL" />
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" placeholder="Brief description..."></textarea>
+
+      <label for="level">Level</label>
+      <select id="level" name="level">
+        <option value="">--Select--</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button type="submit">Create Exam</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="/js/createQuizExam.js"></script>
+</body>
+</html>

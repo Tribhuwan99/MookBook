@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Safron Mock Test</title>
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+</head>
+<body>
+
+  <!-- Navbar (you can reuse from your other pages) -->
+  
+  <nav class="navbar">
+    <div class="navbar-logo">MOOKBOOK</div>
+    <ul class="navbar-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/test">Test</a></li>
+      <li><a href="/quiz">Quiz</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <div class="navbar-auth">
+      <%if(token.length <= 0){%>
+      <a href="/login" class="btn">Login</a>
+      <a href="/signup" class="btn btn-outline">Sign Up</a>
+     <%}else{%>
+       <button onclick="openSidebar()" 
+          style="top:20px; right:20px; padding:10px 20px; background: none; color:white; border:none; border-radius:5px; cursor:pointer;">
+    My Account
+  </button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" 
+       style="position:fixed; top:0; right:-250px; width:250px; height:100%; background-color:#fff3e0; box-shadow:-2px 0 5px rgba(0,0,0,0.3); transition:0.3s; padding:20px; box-sizing:border-box;">
+    
+    <h3 style="margin-top:0; color:#ff9933;">Account</h3>
+    <hr>
+    <button style="width:100%; padding:10px; margin-bottom:10px; background-color:#ff9933; color:white; border:none; border-radius:5px; cursor:pointer;">
+      <a href = "/profile" style="color:white; text-decoration: none;">My Profile</a>
+    </button>
+    <button  style="width:100%; padding:10px; background-color:#d32f2f; color:white; border:none; border-radius:5px; cursor:pointer;">
+      <a href = "/user/logout" style="color:white; text-decoration: none;">Logout</a>
+    </button>
+    <br><br>
+    <button onclick="closeSidebar()" style="background:none; border:none; color:#666; cursor:pointer;">Close ✖</button>
+  </div>
+
+      <%}%>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <h1>Latest Blogs on Competitive Exams</h1>
+    <div class="blogs-container">
+    <%blogs.forEach(function(blog){%>
+    
+      <div class="blog-card">
+        <h2><%=blog.heading%></h2>
+        <p><%=blog.content.substring(0,30)%></p>
+          <a href="/blog/readingBlog/<%=blog._id%>" target="_blank">Read More</a>
+          <div>
+              <a href="/blog/editBlog/<%=blog._id%>" target="_blank" style="color: gray; margin-left: 2px;">edit</a>
+          </div>
+      </div>
+
+
+    <%})%>
+
+        <div class="blog-card">
+        <a href="/blog/createBlog">Create a new bolg</a>
+      </div>
+
+    </div>
+  </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/test">Test</a></li>
+          <li><a href="/quiz">Quiz</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@safrontest.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p>📘 Facebook | 🐦 Twitter | 📸 Instagram</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Safron Mock Test. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script src="/js/navbar.js"></script>
+</body>
+</html>

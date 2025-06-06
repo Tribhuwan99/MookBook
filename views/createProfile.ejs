@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Profile</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fdf6e3; margin: 0; padding: 0;">
+
+  <form action="/profile/createProfile" method="POST"        style="max-width: 500px; margin: 50px auto; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    
+    <h2 style="text-align: center; color: #ff9933;">Edit Profile</h2>
+
+    <!-- Profile Picture Upload -->
+    <!-- <label>Profile Picture:</label><br>
+    <input type="file" name="profile_picture" accept="image/*" style="margin-bottom: 15px;"><br> -->
+
+    <!-- Text Fields -->
+    <label>Username:</label><br>
+    <input type="text" name="username" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Full Name:</label><br>
+    <input type="text" name="fullname" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email"  value="<%=fix%>" readonly required style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Phone Number:</label><br>
+    <input type="text" name="phone" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Gender:</label><br>
+    <select name="gender" style="width: 100%; padding: 8px; margin-bottom: 15px;">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <label>Location:</label><br>
+    <input type="text" name="location" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Language Preference:</label><br>
+    <input type="text" name="language" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Bio:</label><br>
+    <textarea name="bio" rows="3" style="width: 100%; padding: 8px; margin-bottom: 15px;"></textarea><br>
+
+    <label>Role:</label><br>
+    <input type="text" name="role" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Subscription Plan:</label><br>
+    <input type="text" name="subscrplan" style="width: 100%; padding: 8px; margin-bottom: 15px;"><br>
+
+    <label>Social Media Link:</label><br>
+    <input type="url" name="socialmedia" style="width: 100%; padding: 8px; margin-bottom: 20px;"><br>
+
+    <button type="submit" 
+            style="width: 100%; padding: 10px; background-color: #ff9933; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Save Profile
+    </button>
+
+  </form>
+
+</body>
+</html>

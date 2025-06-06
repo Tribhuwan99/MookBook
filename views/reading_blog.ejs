@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Reader</title>
+  <link rel="stylesheet" href="/css/reading_blog.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Blog</h1>
+  </header>
+
+  <div class="container">
+
+    <h2 class="blog-title"><%=blog.heading%></h2>
+    <p class="blog-meta">By: <%=blog.author%></p>
+    <p class="blog-meta"> On: <%= blog.Date.toDateString() %></p>
+    <!-- <img src="https://source.unsplash.com/800x400/?workspace,productivity" alt="Blog featured" class="featured-image" /> -->
+
+    <div class="blog-content">
+      <p><%=blog.content%></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 My Blog · All rights reserved.
+  </footer>
+
+</body>
+</html>

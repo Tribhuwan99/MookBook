@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz List</title>
+  <link rel="stylesheet" href="/css/showAllQuiz.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Available Quizzes</h1>
+
+    <div id="quizList" class="quiz-list">
+      <!-- Quizzes will be inserted here by JS -->
+       <%quizs.forEach(function(quiz){ %> 
+        <div class="quiz-title"><%=quiz.title%></div>
+    <div class="quiz-info">
+      <strong>Time:</strong> <%=quiz.timeLimit%> &nbsp;|&nbsp;
+      <strong>Marks:</strong> <%=quiz.totalMarks%> &nbsp;|&nbsp;
+      <strong>Difficulty:</strong> ${quiz.level}
+    </div>
+    <div class="quiz-description"><%=quiz.description%></div>
+    <%})%>
+    </div>
+  </div>
+  <script src="quizzes.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffa726;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  
+  .navbar-search input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .navbar-search button {
+    padding: 5px 10px;
+    background-color: #fb8c00;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .navbar-auth {
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar-links a.active,
+.navbar-links a:hover {
+  border-bottom: 2px solid white;
+}
+
+  /* Test Section */
+  .test-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .test-section h1 {
+    margin-bottom: 30px;
+    color: #e65100;
+  }
+  
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .test-card {
+    background-color: #ffe0b2;
+    padding: 25px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #4e342e;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+  
+  .test-card:hover {
+    background-color: #ffcc80;
+    transform: translateY(-5px);
+  }
+  

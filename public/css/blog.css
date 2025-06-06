@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff8e1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fb8c00;
+    padding: 15px 30px;
+    align-items: center;
+    color: white;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .navbar-links a.active,
+  .navbar-links a:hover {
+    border-bottom: 2px solid white;
+  }
+  
+  .navbar-auth .btn {
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: white;
+    color: #fb8c00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-auth .btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  /* Blog Section */
+  .blog-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .blog-section h1 {
+    text-align: center;
+    color: #e65100;
+    margin-bottom: 40px;
+  }
+  
+  .blogs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .blog-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blog-card h2 {
+    color: #fb8c00;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .blog-card p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-card a {
+    color: #fb8c00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .blog-card a:hover {
+    text-decoration: underline;
+  }
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+      padding: 20px;
+      background:none
+    }
+
+    .left {
+      /* background-color: #e76f51; */
+      color: rgb(233, 93, 93);
+      padding: 10px 20px;
+      /* border-radius: 5px; */
+    }
+
+    .right {
+      /* background-color: #2a9d8f; */
+      color: rgb(230, 123, 123);
+      padding: 10px 20px;
+      /* border-radius: 5px; */
+    }
+  

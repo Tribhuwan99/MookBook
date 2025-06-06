@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Profile Page</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fdf6e3; margin: 0; padding: 0;">
+
+  <div style="max-width: 500px; margin: 50px auto; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <div style=" position: relative; ">
+  <button style="padding: 10px 20px; margin: 5px; background: none; color: rgb(248, 149, 19); border: none; border-radius: 5px; cursor: pointer;"><a href="/" style="color: #ff9933; text-decoration: none;">Home</a></button>
+</div>
+    <h2 style="text-align: center; color: #ff9933;">My Profile</h2> 
+
+    <!-- Profile Picture -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <img id="profilePic" src="<%=user.propic%>" alt="Profile Picture"
+           style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #ff9933;">
+      <br>
+    </div>
+
+    <!-- Profile Fields -->
+    <div style="line-height: 2;">
+      <p><strong>Username:</strong> <%=user.username%></p>
+      <p><strong>Full Name:</strong> <%=user.fullname%></p>
+      <p><strong>Email:</strong> <%=fix%></p>
+      <p><strong>Phone Number:</strong> <%=user.phone%></p>
+      <p><strong>Date of Birth:</strong> <%=user.dob.toDateString()%></p>
+      <p><strong>Gender:</strong> <%=user.gender%></p>
+      <p><strong>Location:</strong> <%=user.location%></p>
+      <p><strong>Language Preference:</strong> <%=user.language%></p>
+      <p><strong>Bio:</strong> <%=user.bio%></p>
+      <p><strong>Account Status:</strong> Active</p>
+      <p><strong>Member Since:</strong> <%=user.member%></p>
+      <p><strong>Last Login:</strong> <%=user.lastlogin%></p>
+      <p><strong>Role:</strong> <%=user.role%></p>
+      <p><strong>Subscription Plan:</strong> <%=user.subscrplan%></p>
+      <p><strong>Social Media:</strong> <a href="<%=user.socialmedia%>" style="text-decoration: none; color: #ff9933;"><%=user.username%></a></p>
+    </div>
+
+    <!-- Actions -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="editProfile()" style="padding: 10px 20px; margin: 5px; background-color: #ff9933; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        <a href="/profile/editProfile" style="color: white; text-decoration: none;">Edit Profile</a>
+      </button>
+      <button onclick="changePassword()" style="padding: 10px 20px; margin: 5px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Change Password</button>
+      <button onclick="logout()" style="padding: 10px 20px; margin: 5px; background-color: #d32f2f; color: white; border: none; border-radius: 5px; cursor: pointer;"> <a href="/user/logout" style="color: white; text-decoration: none;">Logout</a></button>
+      <button onclick="deleteAccount()" style="padding: 10px 20px; margin: 5px; background-color: #999; color: white; border: none; border-radius: 5px; cursor: pointer;">Delete Account</button>
+    </div>
+
+  </div>
+
+  <!-- Inline JavaScript -->
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        const img = document.getElementById('profilePic');
+        img.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    function editProfile() {
+      alert("Edit Profile functionality coming soon...");
+    }
+
+    function changePassword() {
+      alert("Redirecting to change password page...");
+    }
+
+    function logout() {
+      alert("Logging out...");
+    }
+
+    function deleteAccount() {
+      if (confirm("Are you sure you want to delete your account?")) {
+        alert("Account deleted.");
+      }
+    }
+  </script>
+
+</body>
+</html>

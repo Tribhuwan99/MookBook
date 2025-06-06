@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff8e1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fb8c00;
+    padding: 15px 30px;
+    align-items: center;
+    color: white;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .navbar-links a.active,
+  .navbar-links a:hover {
+    border-bottom: 2px solid white;
+  }
+  
+  .navbar-auth .btn {
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: white;
+    color: #fb8c00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-auth .btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  /* Quiz Section */
+  .quiz-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .quiz-section h1 {
+    margin-bottom: 30px;
+    color: #e65100;
+  }
+  
+  .quiz-category {
+    margin-bottom: 40px;
+  }
+  
+  .quiz-category h2 {
+    color: #fb8c00;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .quiz-category p {
+    font-size: 24px;
+    gap: 20px;
+  }
+  
+  .quiz-questions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .quiz-question {
+    background-color: #ffe0b2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quiz-question h3 {
+    color: #e65100;
+  }
+  
+  .quiz-question input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .quiz-question label {
+    font-size: 16px;
+  }
+  
+  .quiz-question button {
+    padding: 12px 20px;
+    background-color: #fb8c00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .quiz-question button:hover {
+    background-color: #ef6c00;
+  }
+  

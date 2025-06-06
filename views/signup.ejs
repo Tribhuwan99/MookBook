@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Safron Mock Test</title>
+  <link rel="stylesheet" href="css/signup.css" />
+  <script src="js/login.js"></script>
+</head>
+<body>
+
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2>Create Account</h2>
+      <p>Join and start your preparation now</p>
+      <form action="/user/register" method="post" onsubmit="return validatePasswords()">
+        <input type="email" placeholder="Email" name="email"  >
+        <input type="text" placeholder="Username" name="username" >
+        <input type="password" placeholder="password" id="password" name="password">
+        <input type="password" id="confirmPassword" placeholder="confirmPassword" name="confirmPassword">
+        <button type="submit">Sign Up</button>
+        <p class="login-link">Already have an account? <a href="/login">Login</a></p>
+        <p id="error-message" style="color: red;"></p>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
