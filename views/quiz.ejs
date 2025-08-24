@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz - Safron Mock Test</title>
   <link rel="stylesheet" href="/css/quiz.css">
+  <link rel="stylesheet" href="css/test.css" />
   <link rel="stylesheet" href="/css/navbar.css">
 </head>
+
 <body>
 
   <!-- Navbar -->
- 
+
   <nav class="navbar">
     <div class="navbar-logo">MOOKBOOK</div>
     <ul class="navbar-links">
@@ -21,61 +24,68 @@
       <li><a href="/about">About</a></li>
     </ul>
     <div class="navbar-auth">
-       <%if(token.length <= 0){%>
-      <a href="/login" class="btn">Login</a>
-      <a href="/signup" class="btn btn-outline">Sign Up</a>
-      <%}else{%>
-       <button onclick="openSidebar()" 
-          style="top:20px; right:20px; padding:10px 20px; background: none; color:white; border:none; border-radius:5px; cursor:pointer;">
-    My Account
-  </button>
+      <%if(token.length <=0){%>
+        <a href="/login" class="btn">Login</a>
+        <a href="/signup" class="btn btn-outline">Sign Up</a>
+        <%}else{%>
+          <button onclick="openSidebar()"
+            style="top:20px; right:20px; padding:10px 20px; background: none; color:white; border:none; border-radius:5px; cursor:pointer;">
+            My Account
+          </button>
 
-  <!-- Sidebar -->
-  <div id="sidebar" 
-       style="position:fixed; top:0; right:-250px; width:250px; height:100%; background-color:#fff3e0; box-shadow:-2px 0 5px rgba(0,0,0,0.3); transition:0.3s; padding:20px; box-sizing:border-box;">
-    
-    <h3 style="margin-top:0; color:#ff9933;">Account</h3>
-    <hr>
-    <button style="width:100%; padding:10px; margin-bottom:10px; background-color:#ff9933; color:white; border:none; border-radius:5px; cursor:pointer;">
-      <a href = "/profile" style="color:white; text-decoration: none;">My Profile</a>
-    </button>
-    <button  style="width:100%; padding:10px; background-color:#d32f2f; color:white; border:none; border-radius:5px; cursor:pointer;">
-      <a href = "/user/logout" style="color:white; text-decoration: none;">Logout</a>
-    </button>
-    <br><br>
-    <button onclick="closeSidebar()" style="background:none; border:none; color:#666; cursor:pointer;">Close ✖</button>
-  </div>
+          <!-- Sidebar -->
+          <div id="sidebar"
+            style="position:fixed; top:0; right:-250px; width:250px; height:100%; background-color:#fff3e0; box-shadow:-2px 0 5px rgba(0,0,0,0.3); transition:0.3s; padding:20px; box-sizing:border-box;">
 
-      <%}%>
+            <h3 style="margin-top:0; color:#ff9933;">Account</h3>
+            <hr>
+            <button
+              style="width:100%; padding:10px; margin-bottom:10px; background-color:#ff9933; color:white; border:none; border-radius:5px; cursor:pointer;">
+              <a href="/profile" style="color:white; text-decoration: none;">My Profile</a>
+            </button>
+            <button
+              style="width:100%; padding:10px; background-color:#d32f2f; color:white; border:none; border-radius:5px; cursor:pointer;">
+              <a href="/user/logout" style="color:white; text-decoration: none;">Logout</a>
+            </button>
+            <br><br>
+            <button onclick="closeSidebar()" style="background:none; border:none; color:#666; cursor:pointer;">Close
+              ✖</button>
+          </div>
+
+          <%}%>
     </div>
   </nav>
 
   <!-- Quiz Section -->
   <section class="quiz-section">
     <h1>Competitive Exam Quizzes</h1>
-    
- <%if(exam.length > 0){ %>
-      <%exam.forEach(function(val) { %>
 
-    <div class="quiz-category">
-      <h2><%=val.name%></h2>
-      <div class="quiz-questions" id="ssc-cgl">
-        <p><%=val.description%> <button  style="display: inline; position: relative; padding:10px; background-color: #f1de31; color:rgb(247, 149, 37); border:none; border-radius:5px; font-weight: bold; cursor:pointer;">
-      <a href = "/quiz/<%=val.name%>" style="color:rgb(20, 19, 19); text-decoration: none;">Take Quiz</a>
-    </button></p>
-      </div>
+    <div class="test-grid">
+      <a href="" class="test-card">SSC CGL</a>
+      <a href="#" class="test-card">SSC CHSL</a>
+      <a href="#" class="test-card">UPSC Prelims</a>
+      <a href="#" class="test-card">UPSC CSAT</a>
+      <a href="#" class="test-card">NEET</a>
+      <a href="#" class="test-card">JEE Main</a>
+      <a href="#" class="test-card">JEE Advanced</a>
+      <a href="#" class="test-card">Bank PO</a>
+      <a href="#" class="test-card">Bank Clerk</a>
+      <a href="#" class="test-card">IBPS RRB</a>
+      <a href="#" class="test-card">Railway NTPC</a>
+      <a href="#" class="test-card">CDS</a>
+      <a href="#" class="test-card">NDA</a>
+      <a href="#" class="test-card">CAT</a>
+      <a href="#" class="test-card">MAT</a>
+      <a href="#" class="test-card">CUET</a>
+      <a href="#" class="test-card">TET</a>
+      <a href="#" class="test-card">State PCS</a>
+      <a href="#" class="test-card">LIC AAO</a>
+      <a href="#" class="test-card">B.Ed Entrance</a>
     </div>
- <%})%>
-     <%} else {%>
-      <h2>There is no any Quix Exam Yet</h2>
-      <div class="quiz-questions" id="upsc-prelims">
-        <p>Coming soon...</p>
-      </div>
-    </div>
-      
-<%}%>
-      <button  style="display: inline; padding:10px; background-color: #ff9933; color:white; border:none; border-radius:5px; font-weight: bold; cursor:pointer;">
-      <a href = "/quiz/createQuizExam" style="color:white; text-decoration: none;">Add Quiz Exam</a>
+
+    <button
+      style="display: inline; margin-top: 10px; padding:10px; background-color: #ff9933; color:white; border:none; border-radius:5px; font-weight: bold; cursor:pointer;">
+      <a href="/quiz/createQuiz" style="color:white; text-decoration: none;">Add Quiz Exam</a>
     </button>
 
     <!-- Add more categories as needed -->
@@ -114,4 +124,5 @@
   <script src="/js/quiz.js"></script>
   <script src="/js/navbar.js"></script>
 </body>
+
 </html>
