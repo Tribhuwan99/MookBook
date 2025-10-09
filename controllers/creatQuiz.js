@@ -1,28 +1,34 @@
 const express = require('express')
 const quizModel = require('../models/quizModel')
+const subQuiz = require('../models/quizExamModel')
 
-// module.exports.quizcreate= async function (req, res) {
-//     let title = req.body
-//     try{
-//         let quiz = await quizModel.create({
-//             title
-//         })
-//         res.redirect('/quiz')
-//     }
-//     catch(err){
-//         res.send(err.message)
-//     }
-// }
 module.exports.createQuizs = async function(req, res){
     let {heading} = req.body;
 
     try{
-        let blogCreate = await quizModel.create({
+        let QuizCreate = await quizModel.create({
             heading
         })
         res.redirect('/quiz');
     }
     catch(err){
         res.send(err.message);
+    }
+}
+module.exports.createSubQuiz = async function(req, res) {
+    
+    let {heading, title, timeLimit, totalMarks} = req.body;
+
+    try{
+        let createsubQuiz = await subQuiz.create({
+            heading,
+            title,
+            Time:timeLimit,
+            Marks:totalMarks
+        })
+        res.redirect('/quiz/quizSub')
+    }
+    catch(err){
+        res.send(err.message)
     }
 }

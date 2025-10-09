@@ -15,11 +15,11 @@
   <form action="/quiz/createQuiz", method="post">
   <div class="container">
     <h1>Add Quiz Title</h1>
-    <input type="text" id="quizTitle" placeholder="Enter quiz title" required>
+    <input type="text" name="heading" id="quizTitle" placeholder="Enter quiz title" required>
     <br>
-    <button onclick="addQuiz()">Add</button>
-    <h2>Quiz Titles</h2>
-    <ul id="quizList"></ul>
+    <button type="submit" onclick="addQuiz()">Add</button>
+    <!-- <h2>Quiz Titles</h2>
+    <ul id="quizList"></ul> -->
   </div>
   </form>
   <!-- Footer -->

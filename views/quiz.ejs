@@ -61,7 +61,14 @@
     <h1>Competitive Exam Quizzes</h1>
 
     <div class="test-grid">
-      <a href="" class="test-card">SSC CGL</a>
+       <%quiz.forEach(function(qu){%>
+      <div class="test-grid">
+        <a href="/quiz/<%=qu.heading%>" class="test-card">
+          <%=qu.heading%>
+        </a>
+      </div>
+      <% })%>
+      <!-- <a href="" class="test-card">SSC CGL</a>
       <a href="#" class="test-card">SSC CHSL</a>
       <a href="#" class="test-card">UPSC Prelims</a>
       <a href="#" class="test-card">UPSC CSAT</a>
@@ -80,8 +87,8 @@
       <a href="#" class="test-card">TET</a>
       <a href="#" class="test-card">State PCS</a>
       <a href="#" class="test-card">LIC AAO</a>
-      <a href="#" class="test-card">B.Ed Entrance</a>
-    </div>
+      <a href="#" class="test-card">B.Ed Entrance</a> -->
+    
 
     <button
       style="display: inline; margin-top: 10px; padding:10px; background-color: #ff9933; color:white; border:none; border-radius:5px; font-weight: bold; cursor:pointer;">
