@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Question - Mockbook</title>
+  <link rel="stylesheet" href="/css/createQuizQuestion.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Add New Question 🧠</h1>
+    <form action="/quiz/create/quizquestion" method="post" id="questionForm">
+      <label for="questionText">Question:</label>
+      <textarea name="question" id="questionText" placeholder="Enter your question here..." required></textarea>
+
+      <div class="options">
+        <label>Options:</label>
+        <input name="opa" type="text" id="option1" placeholder="Option A" required />
+        <input name="opb" type="text" id="option2" placeholder="Option B" required />
+        <input name="opc" type="text" id="option3" placeholder="Option C" required />
+        <input name="opd" type="text" id="option4" placeholder="Option D" required />
+      </div>
+
+      <label for="correctOption">Correct Option:</label>
+      <select name="correct" id="correctOption" required>
+        <option value="">Select Correct Option</option>
+        <option value="0">A</option>
+        <option value="1">B</option>
+        <option value="2">C</option>
+        <option value="3">D</option>
+      </select>
+
+      <label for="heading">Heading / Exam:</label>
+      <!-- <select name="correct" id="correctOption" required>
+            <option value="">A</option>
+      </select> -->
+      <select id="correctOption" name="title" required>
+          <option value="">-- Choose Exam --</option>
+          <% exams.forEach(function(exam){%>
+          <option value="<%=exam.heading%>"><%=exam.heading%></option>
+          <%})%>
+      <!-- <input name="title" type="text" id="heading" placeholder="e.g. SSC, NDA, GK" required /> -->
+
+      <label for="marks">Marks:</label>
+      <input name="Marks" type="number" id="marks" placeholder="e.g. 1" value="1" required />
+
+      <label for="explanation">Explanation (optional):</label>
+      <textarea name="Exp" id="explanation" placeholder="Short explanation if needed..."></textarea>
+
+      <button type="submit" class="btn">Add Question</button>
+    </form>
+
+    <div id="output" class="output"></div>
+  </div>
+
+  <script src="/js/createQuizQuestion.js"></script>
+</body>
+</html>

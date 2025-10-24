@@ -18,10 +18,8 @@
         <label for="exam">Select Exam:</label>
         <select id="exam" name="heading" required>
           <option value="">-- Choose Exam --</option>
-          <option value="ssc-cgl">SSC CGL</option>
-          <option value="ssc-chsl">SSC CHSL</option>
-          <option value="bank-po">Bank PO</option>
-          <option value="bank-clerk">Bank Clerk</option>
+          <% exams.forEach(function(exam){%>
+          <option value="<%=exam.heading%>"><%=exam.heading%></option>
           <!-- Add more exams dynamically later -->
         </select>
       </div>
@@ -31,12 +29,6 @@
         <label for="title">Quiz Title:</label>
         <input type="text" id="title" name="title" placeholder="Enter quiz title" required>
       </div>
-
-      <!-- Description -->
-      <!-- <div class="form-group">
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" placeholder="Enter description"></textarea>
-      </div> -->
 
       <!-- Time Limit -->
       <div class="form-group">

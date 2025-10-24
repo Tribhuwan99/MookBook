@@ -16,9 +16,11 @@ const quizExamSchema = mongoose.Schema({
         enum:['easy', 'medium', 'hard'],
         default:'easy'
     },
-    quizeid:{
-    type: mongoose.Schema.Types.ObjectId, ref : 'Quiz', require :true
-  }
+    quizeid:[
+        {
+            type: String, ref : 'Quiz', require :true
+        }
+    ]
 })
 
 module.exports = mongoose.model('quizExam', quizExamSchema)

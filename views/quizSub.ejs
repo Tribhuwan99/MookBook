@@ -52,44 +52,24 @@
 
   <!-- Header -->
   <header>
-    <h1>SSC CGL - Quizzes</h1>
+    <h1> <%=title%> - Quizzes</h1>
   </header>
 
   <!-- Quiz List -->
   <main>
     <div class="quiz-container">
       <!-- Quiz Card 1 -->
-      <div class="quiz-card">
-        <h2>General Awareness</h2>
-        <p>Time Limit: 15 mins</p>
-        <p>Total Marks: 25</p>
-        <button class="start-btn" data-id="1">Start Quiz</button>
-      </div>
-
+       <% exams.forEach(function(exam){%>
+        <div class="quiz-card">
+            <h2><%=exam.title%></h2>
+            <p>Time Limit: <%=exam.Time%> mins</p>
+            <p>Total Marks: <%=exam.Marks%></p>
+            <button class="start-btn" data-id="1">
+              <a href="/quiz/<%=title%>/<%=exam.title%>" style="text-decoration: none; color: white;">Start Quiz</a></button>
+          </div>
+      <%})%>
       <!-- Quiz Card 2 -->
-      <div class="quiz-card">
-        <h2>Quantitative Aptitude</h2>
-        <p>Time Limit: 20 mins</p>
-        <p>Total Marks: 30</p>
-        <button class="start-btn" data-id="2">Start Quiz</button>
-      </div>
-
-      <!-- Quiz Card 3 -->
-      <div class="quiz-card">
-        <h2>Reasoning Ability</h2>
-        <p>Time Limit: 20 mins</p>
-        <p>Total Marks: 30</p>
-        <button class="start-btn" data-id="3">Start Quiz</button>
-      </div>
-
-      <!-- Quiz Card 4 -->
-      <div class="quiz-card">
-        <h2>English Language</h2>
-        <p>Time Limit: 15 mins</p>
-        <p>Total Marks: 25</p>
-        <button class="start-btn" data-id="4">Start Quiz</button>
-      </div>
-
+     
       <div class="quiz-card">
         <button class="start-btn">
           <a href="/quiz/create/subQuiz" style="text-decoration: none; color: white;"> Add Quiz</a></button>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Questions - Mockbook</title>
+  <link rel="stylesheet" href="/css/QuizQuestion.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>All Quiz Questions</h1>
+
+    <% questions.forEach(function(ques){%>
+    <div class="question-card">
+      <h3><%=ques.Question%>?</h3>
+      <ul>
+        <li>A. <%=ques.Opa%></li>
+        <li>B. <%=ques.Opb%></li>
+        <li>C. <%=ques.Opc%></li>
+        <li>D. <%=ques.Opd%></li>
+      </ul>
+      <p><strong>Heading:</strong> <%=ques.Title%></p>
+      <p><strong>Marks:</strong> <%=ques.Marks%></p>
+      <!-- <p><strong>Explanation:</strong> Delhi is the capital city of India.</p> -->
+    </div>
+<%})%>
+    <!-- <div class="question-card">
+      <h3>2. Who is known as the Father of Computers?</h3>
+      <ul>
+        <li>A. Alan Turing</li>
+        <li>B. Charles Babbage ✅</li>
+        <li>C. John von Neumann</li>
+        <li>D. Tim Berners-Lee</li>
+      </ul>
+      <p><strong>Heading:</strong> Computer Science</p>
+      <p><strong>Marks:</strong> 2</p>
+      <p><strong>Explanation:</strong> Charles Babbage designed the first mechanical computer.</p>
+    </div>
+
+    <div class="question-card">
+      <h3>3. The chemical symbol of Gold is?</h3>
+      <ul>
+        <li>A. Ag</li>
+        <li>B. Au ✅</li>
+        <li>C. Gd</li>
+        <li>D. Go</li>
+      </ul>
+      <p><strong>Heading:</strong> Chemistry</p>
+      <p><strong>Marks:</strong> 1</p>
+      <p><strong>Explanation:</strong> Gold’s symbol comes from the Latin word "Aurum".</p>
+    </div> -->
+  </div>
+
+  <script src="/js/QuizQuestion.js"></script>
+</body>
+</html>
